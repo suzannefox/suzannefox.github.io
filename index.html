@@ -4,6 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fixed Banner with Scrollable Section</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+        /* Fixed banner at the top */
+        .banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        /* Scrollable section below the banner */
+        .content {
+            margin-top: 70px;
+            /* Must be at least the height of the banner */
+            padding: 1em;
+            height: calc(100vh - 70px);
+            /* Fill the remaining viewport height */
+            overflow-y: auto;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        🌟 Fixed Banner
+    </div>
+
+    <div class="content">
+        <p>This section scrolls independently of the banner.</p>
+        <!-- Add lots of content to enable scrolling -->
+        <p>Lorem ipsum dolor sit amet...</p>
+        <p>More content...</p>
+        <p>More content...</p>
+        <p>More content...</p>
+        <p>More content...</p>
+        <p>More content...</p>
+        <p>More content...</p>
+        <p>More content...</p>
+        <p>More content...</p>
+        <p>More content...</p>
+        <p>More content...</p>
+    </div>
+
+</body>
+
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Image Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +85,7 @@
     <main class="gallery">
         <img src="SSW-Content/SUN.jpg" alt="Image 1">
         <img src="SSW-Content/MERCURY.jpg" alt="Image 2">
-        <!-- Add more <img> tags as needed -->
+
     </main>
 
     <footer>
@@ -26,7 +95,7 @@
 
 </html>
 
-<!--
+
 <b>Suzannes first Static Page</b>
 <p>"Hello Universe !!"</p>
  
