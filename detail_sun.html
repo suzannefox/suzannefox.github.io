@@ -6,7 +6,7 @@
   <title>The Sun</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Roboto, Arial, sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 20px;
@@ -38,17 +38,10 @@
 
     .image {
       flex: 1;
-      min-width: 250px;
-      max-width: 100%;
+      min-width: 100px;
+      max-width: 50%;
     }
-
-    .image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
-      display: block;
-    }
-
+   
     .caption {
       font-size: 0.9em;
       text-align: center;
@@ -68,31 +61,6 @@
       max-height: 0;
       opacity: 0;
       pointer-events: none;
-    }
-
-    .text {
-      flex: 2;
-      min-width: 250px;
-    }
-
-    .image {
-      flex: 1;
-      min-width: 200px;
-    }
-
-    .image img {
-      max-width: 100%;
-      border-radius: 6px;
-    }
-
-    .caption {
-      text-align: center;
-      font-style: italic;
-      font-size: 0.9em;
-    }
-    .expandable {
-      display: none;
-      transition: max-height 0.3s ease;
     }
 
     .expand-toggle {
@@ -124,6 +92,11 @@
 
   <h2 class="expandable-heading" onclick="toggleIntro()">Introduction</h2>
   <div class="flex-container" id="intro-section">
+        <div class="image">
+          <img src="images/sun01.jpg" alt="The Sun">
+          <div class="caption">The Sun (Image: NASA)</div>
+        </div>
+
     <div class="text">
       <p>We often take our Sun for granted – it is our constant companion, day in and day out, and we literally would not
         be able to live without it.
@@ -132,10 +105,6 @@
         It contains over 99% of the mass of all of the other objects in our solar system. Our Sun is just an
         average-sized star.
         Some stars are hundreds of times the diameter of our Sun, and many are only a tenth the size of our Sun.</p>
-    </div>
-    <div class="image">
-      <img src="images/sun01.jpg" alt="The Sun">
-      <div class="caption">The Sun (Image: NASA)</div>
     </div>
   </div>
 
