@@ -55,7 +55,33 @@
       margin-top: 5px;
       font-style: italic;
     }
+    .flex-container {
+      display: flex;
+      gap: 20px; /* space between columns */
+      align-items: flex-start; /* align top */
+      flex-wrap: wrap; /* stack on small screens */
+    }
 
+    .text {
+      flex: 2;
+      min-width: 250px;
+    }
+
+    .image {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .image img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .caption {
+      text-align: center;
+      font-style: italic;
+      font-size: 0.9em;
+    }
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -67,6 +93,23 @@
 
   <a href="index.html">Main Menu</a>
   <h1>The Sun</h1>
+
+  <div class="flex-container">
+    <div class="text">
+      <h2>Introduction</h2>
+      <p>We often take our Sun for granted – it is our constant companion, day in and day out, and we literally would not
+      be able to live without it.
+      At a diameter of nearly 1.4 million kilometres, the Sun is massive compared to the Earth – over 100 times larger
+      in diameter.
+      It contains over 99% of the mass of all of the other objects in our solar system. Our Sun is just an
+      average-sized star.
+      Some stars are hundreds of times the diameter of our Sun, and many are only a tenth the size of our Sun.</p>
+    </div>
+    <div class="image">
+      <img src="images/sun01.jpg" alt="The Sun">
+      <div class="caption">The Sun (Image: NASA)</div>
+    </div>
+  </div>
 
   <table width="100%" cellspacing="20">
     <tr valign="top">
